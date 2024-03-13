@@ -13,10 +13,10 @@ public class lab0_2 {
 	}
 
 	//1부터 n까지의 정수를 출력하는 메소드
-	public static int number(int n) {
+	public static int number(int n, int i) {
 		if(n>0) {
-			System.out.print(n + " ");
-			return number(n-1);
+			System.out.print(i - (n-1) + " ");
+			return number(n-1,i);
 		}
 		return n;
 	}
@@ -29,7 +29,7 @@ public class lab0_2 {
 		int n = scanner.nextInt();
 
 		System.out.println(sum(n));
-		number(n);
+		number(n,n);
 	}
 
 }
